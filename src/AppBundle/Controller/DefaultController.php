@@ -17,7 +17,7 @@ class DefaultController extends Controller
         $jsonString = '{"condition":"AND","rules":[{"id":"price","field":"price","type":"double","input":"text","operator":"is_not_null","value":null},{"condition":"OR","rules":[{"id":"price","field":"price","type":"double","input":"select","operator":"greater","value":"2.03"},{"id":"price","field":"price","type":"double","input":"select","operator":"less","value":"2.03"}]}]}';
 
         $jsonDeserializer = $this->get('app.serializer.json_deserializer');
-        $parser = $this->get('app.qbjs_parser')->parse(Product::class, ['id'=>'id', 'price', 'price']);
+        $parser = $this->get('app.qbjs_parser')->parse(Product::class, ['id'=>'id', 'price'=>'price']);
 
         $deserializedRuleGroup = $jsonDeserializer->deserialize($jsonString);
         $parsedRuleGroup = $parser->parse($deserializedRuleGroup);
