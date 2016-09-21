@@ -10,6 +10,23 @@
     "autoload-dev": {
         "psr-4": { "Tests\\": "tests/" }
     },
+    "repositories": [
+        {
+            "type":"package",
+            "package": {
+                "name": "FL/QBJSParser",
+                "version":"0.1.1",
+                "source": {
+                    "url": "https://github.com/fourlabsldn/QBJSParser.git",
+                    "type": "git",
+                    "reference":"master"
+                },
+                "autoload": {
+                    "psr-4": { "FL\\QBJSParser\\": "src" }
+                }
+            }
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "symfony/symfony": "3.1.*",
@@ -21,7 +38,8 @@
         "symfony/polyfill-apcu": "^1.0",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "^2.0"
+        "incenteev/composer-parameter-handler": "^2.0",
+        "FL/QBJSParser": "^0.1.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
