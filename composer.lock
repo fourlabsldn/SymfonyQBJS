@@ -784,12 +784,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fourlabsldn/QBJSParser.git",
-                "reference": "c57da124cd1bd394a27474df478d70a5ad37905f"
+                "reference": "107e2dd6c70db84b536373549163b4c65a406642"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fourlabsldn/QBJSParser/zipball/c57da124cd1bd394a27474df478d70a5ad37905f",
-                "reference": "c57da124cd1bd394a27474df478d70a5ad37905f",
+                "url": "https://api.github.com/repos/fourlabsldn/QBJSParser/zipball/107e2dd6c70db84b536373549163b4c65a406642",
+                "reference": "107e2dd6c70db84b536373549163b4c65a406642",
                 "shasum": ""
             },
             "require": {
