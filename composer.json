@@ -10,6 +10,7 @@
     "autoload-dev": {
         "psr-4": { "Tests\\": "tests/" }
     },
+    "prefer-stable" : true,
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.9",
