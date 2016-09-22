@@ -14,9 +14,12 @@ class LoadProductData implements FixtureInterface
     {
         $label = new Label();
         $label->setName('SALE');
+        $labelSpecification = new Specification();
+        $labelSpecification->setDescription('Label specification is a specification');
+        $label->setSpecification($labelSpecification);
 
-        $specification = new Specification();
-        $specification->setDescription('Table specification is a specification of specifications');
+        $productSpecification = new Specification();
+        $productSpecification->setDescription('Product specification is a specification');
 
         $products = [
             'chair' => ['name' => 'Chair', 'price' => 12.00],
@@ -31,7 +34,7 @@ class LoadProductData implements FixtureInterface
             $productObject->addLabel($label);
             switch ($key){
                 case 'table':
-                    $productObject->setSpecification($specification);
+                    $productObject->setSpecification($productSpecification);
             }
             $manager->persist($productObject);
         }

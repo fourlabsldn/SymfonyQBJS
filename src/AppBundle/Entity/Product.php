@@ -42,7 +42,7 @@ class Product
     /**
      * @var Specification
      * @ORM\OneToOne(targetEntity="AppBundle\Entity\Specification", cascade={"persist"})
-     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true, onDelete="SET NULL")
      */
     private $specification;
 
@@ -100,7 +100,7 @@ class Product
     /**
      * @return ArrayCollection
      */
-    public function getLabels(): ArrayCollection
+    public function getLabels()
     {
         return $this->labels;
     }
@@ -130,7 +130,7 @@ class Product
     /**
      * @return Specification
      */
-    public function getSpecification(): Specification
+    public function getSpecification()
     {
         return $this->specification;
     }
@@ -145,6 +145,4 @@ class Product
 
         return $this;
     }
-
-
 }

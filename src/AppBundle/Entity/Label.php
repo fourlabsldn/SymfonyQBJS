@@ -25,6 +25,13 @@ class Label
     private $name;
 
     /**
+     * @var Specification
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Specification", cascade={"persist"})
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true, onDelete="SET NULL")
+     */
+    private $specification;
+
+    /**
      * @return int
      */
     public function getId(): int
@@ -47,6 +54,25 @@ class Label
     public function setName(string $name): Label
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return Specification
+     */
+    public function getSpecification()
+    {
+        return $this->specification;
+    }
+
+    /**
+     * @param Specification $specification
+     * @return Label
+     */
+    public function setSpecification(Specification $specification): Label
+    {
+        $this->specification = $specification;
 
         return $this;
     }
