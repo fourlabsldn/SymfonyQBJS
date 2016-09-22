@@ -43,9 +43,9 @@ qbjs_parser:
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
     use AppBundle\Entity\Product;
 
-    class SomeController extends Controller
+    class ProductController extends Controller
     {
-        public function indexAction(Request $request, string $jsonString)
+        public function reportsAction(Request $request, string $jsonString)
         {
              $parsedRuleGroup = $this->get('qbjs_parser.doctrine_parser')->parseJsonString($jsonString, Product::class);
              
