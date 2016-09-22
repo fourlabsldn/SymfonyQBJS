@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cd05fc16b5f9aab358249807a6388d64",
-    "content-hash": "28351579479b424420ade4e3892f94ed",
+    "hash": "6b5e566afc12d5506884358ce112671a",
+    "content-hash": "2f90af274ba61ff8825463205196ed75",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -784,12 +784,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fourlabsldn/QBJSParser.git",
-                "reference": "107e2dd6c70db84b536373549163b4c65a406642"
+                "reference": "51813f0e88aea7ea554e0001ce8356b9fc729d77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fourlabsldn/QBJSParser/zipball/107e2dd6c70db84b536373549163b4c65a406642",
-                "reference": "107e2dd6c70db84b536373549163b4c65a406642",
+                "url": "https://api.github.com/repos/fourlabsldn/QBJSParser/zipball/51813f0e88aea7ea554e0001ce8356b9fc729d77",
+                "reference": "51813f0e88aea7ea554e0001ce8356b9fc729d77",
                 "shasum": ""
             },
             "require": {
@@ -832,7 +832,61 @@
                 "querybuilder.js.org",
                 "symfony"
             ],
-            "time": "2016-09-21 17:00:48"
+            "time": "2016-09-22 10:17:08"
+        },
+        {
+            "name": "fourlabs/qbjs-parser-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fourlabsldn/QBJSParserBundle.git",
+                "reference": "6ba69b5e5880afda7e917c42979a626c5855015f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fourlabsldn/QBJSParserBundle/zipball/6ba69b5e5880afda7e917c42979a626c5855015f",
+                "reference": "6ba69b5e5880afda7e917c42979a626c5855015f",
+                "shasum": ""
+            },
+            "require": {
+                "fourlabs/qbjs-parser": "dev-master",
+                "php": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FL\\QBJSParserBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Four Labs",
+                    "email": "luis@fourlabs.co.uk",
+                    "homepage": "https://fourlabs.co.uk/"
+                }
+            ],
+            "description": "This bundle is a Symfony wrapper for fourlabs/qbjs-parser.",
+            "homepage": "https://github.com/fourlabsldn/QBJSParserBundle",
+            "keywords": [
+                "QBJS",
+                "QBJSParser",
+                "QBJSParserBundle",
+                "doctrine",
+                "jQuery-QueryBuilder",
+                "jquery",
+                "orm",
+                "parser",
+                "php",
+                "querybuilder",
+                "querybuilder.js",
+                "querybuilder.js.org",
+                "symfony"
+            ],
+            "time": "2016-09-22 11:31:27"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1215,12 +1269,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "73ce6e89c2751d8257c2fe29788fc5830a04e023"
+                "reference": "1a29ea688714eeb0025b397f6ac17bdbf1a6138c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/73ce6e89c2751d8257c2fe29788fc5830a04e023",
-                "reference": "73ce6e89c2751d8257c2fe29788fc5830a04e023",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/1a29ea688714eeb0025b397f6ac17bdbf1a6138c",
+                "reference": "1a29ea688714eeb0025b397f6ac17bdbf1a6138c",
                 "shasum": ""
             },
             "require": {
@@ -1272,7 +1326,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2016-09-12 20:05:56"
+            "time": "2016-09-21 22:52:55"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -1831,12 +1885,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "d86fc12365a7cd9c3f20cfe6e9dc3817fbba24d3"
+                "reference": "b23389d85dc69eb6b10306ad6bc92ca18df1324a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/d86fc12365a7cd9c3f20cfe6e9dc3817fbba24d3",
-                "reference": "d86fc12365a7cd9c3f20cfe6e9dc3817fbba24d3",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/b23389d85dc69eb6b10306ad6bc92ca18df1324a",
+                "reference": "b23389d85dc69eb6b10306ad6bc92ca18df1324a",
                 "shasum": ""
             },
             "require": {
@@ -1964,7 +2018,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-09-20 21:44:00"
+            "time": "2016-09-21 20:55:10"
         },
         {
             "name": "twig/twig",
@@ -2260,7 +2314,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "fourlabs/qbjs-parser": 20
+        "fourlabs/qbjs-parser-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
