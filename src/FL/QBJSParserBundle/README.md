@@ -2,7 +2,7 @@
 
 ### Installation
 
-- Install with composer.
+- `composer require fourlabs/qbjs-parser-bundle`
 - Add the Bundle to app/AppKernel.php
 
 ```php
