@@ -74,3 +74,4 @@ qbjs_parser:
             properties:
                 id: id
                 price: ~
+                specification: ~

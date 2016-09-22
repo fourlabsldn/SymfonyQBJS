@@ -39,6 +39,13 @@ class Product
      */
     private $labels;
 
+    /**
+     * @var Specification
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Specification", cascade={"persist"})
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
+     */
+    private $specification;
+
     public function __construct()
     {
         $this->labels = new ArrayCollection();
@@ -116,6 +123,25 @@ class Product
     public function removeLabel(Label $label) : Product
     {
         $this->labels->remove($label);
+
+        return $this;
+    }
+
+    /**
+     * @return Specification
+     */
+    public function getSpecification(): Specification
+    {
+        return $this->specification;
+    }
+
+    /**
+     * @param Specification $specification
+     * @return Product
+     */
+    public function setSpecification(Specification $specification): Product
+    {
+        $this->specification = $specification;
 
         return $this;
     }
