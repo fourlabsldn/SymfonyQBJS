@@ -1,0 +1,3 @@
+services:
+    qbjs_parser.doctrine_parser:
+        class: FL\QBJSParserBundle\Service\QBJSDoctrineParserService

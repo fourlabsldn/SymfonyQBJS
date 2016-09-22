@@ -1,3 +1,0 @@
-services:
-    app.qbjs_parser:
-        class: FL\QBJSParserBundle\Service\ParseEntityService

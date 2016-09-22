@@ -16,11 +16,11 @@ class DefaultController extends Controller
     {
         $jsonString = '{"condition":"AND","rules":[{"id":"price","field":"price","type":"double","input":"text","operator":"is_not_null","value":null},{"condition":"OR","rules":[{"id":"price","field":"price","type":"double","input":"select","operator":"greater","value":"2.03"},{"id":"price","field":"price","type":"double","input":"select","operator":"less","value":"2.03"}]}]}';
 
-        $jsonDeserializer = $this->get('app.serializer.json_deserializer');
-        $parser = $this->get('app.qbjs_parser')->parse(Product::class, ['id'=>'id', 'price'=>'price']);
+        $jsonDeserializer = $this->get('qbjs_parser.json_deserializer');
+        $productParser = $this->get('qbjs_parser.doctrine_parser')->newQBJSDoctrineParser(Product::class);
 
         $deserializedRuleGroup = $jsonDeserializer->deserialize($jsonString);
-        $parsedRuleGroup = $parser->parse($deserializedRuleGroup);
+        $parsedRuleGroup = $productParser->parse($deserializedRuleGroup);
 
         $query = $this->get('doctrine.orm.entity_manager')->createQuery($parsedRuleGroup->getDqlString());
         $query->setParameters($parsedRuleGroup->getParameters());
