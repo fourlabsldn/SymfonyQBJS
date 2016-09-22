@@ -1,3 +1,0 @@
-services:
-    qbjs_parser.json_deserializer:
-        class: FL\QBJSParser\Serializer\JsonDeserializer

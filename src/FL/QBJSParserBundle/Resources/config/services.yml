@@ -1,3 +1,5 @@
-imports:
-    - { resource: 'services/parser.yml' }
-    - { resource: 'services/serializer.yml' }
+services:
+    qbjs_parser.json_deserializer:
+        class: FL\QBJSParser\Serializer\JsonDeserializer
+    qbjs_parser.doctrine_parser:
+        class: FL\QBJSParserBundle\Service\QBJSDoctrineParserService
