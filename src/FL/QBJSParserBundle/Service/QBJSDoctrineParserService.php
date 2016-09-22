@@ -31,13 +31,14 @@ class QBJSDoctrineParserService
     public function __construct(array $classesAndMappings, JsonDeserializer $jsonDeserializer)
     {
         foreach($classesAndMappings as $classAndMappings){
-            foreach($classAndMappings['mappings'] as $mapping){
-                $this->classNameToMapping[$classAndMappings['class']][$mapping['query_builder_id']] = $mapping['entity_property'];
+            foreach($classAndMappings['properties'] as $queryBuilderId => $entityProperty){
+                $this->classNameToMapping[$classAndMappings['class']][$queryBuilderId] = $entityProperty ? $entityProperty : $queryBuilderId;
             }
         }
         foreach($this->classNameToMapping as $className => $queryBuilderFieldsToEntityProperties){
             $this->classNameToDoctrineParser[$className] = new DoctrineParser($className, $queryBuilderFieldsToEntityProperties);
         }
+
         $this->jsonDeserializer = $jsonDeserializer;
     }
 

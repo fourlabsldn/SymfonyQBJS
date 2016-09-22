@@ -71,10 +71,6 @@ qbjs_parser:
     doctrine_classes_and_mappings:
         app_entity_product:
             class: AppBundle\Entity\Product
-            mappings:
-                product_id:
-                    query_builder_id: id
-                    entity_property: id
-                product_price:
-                    query_builder_id: price
-                    entity_property: price
+            properties:
+                id: id
+                price: ~
