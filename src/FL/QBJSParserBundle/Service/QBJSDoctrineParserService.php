@@ -3,6 +3,7 @@
 namespace FL\QBJSParserBundle\Service;
 
 use FL\QBJSParser\Parser\Doctrine\DoctrineParser;
+use FL\QBJSParser\Serializer\JsonDeserializer;
 
 class QBJSDoctrineParserService
 {
@@ -19,9 +20,15 @@ class QBJSDoctrineParserService
     private $classNameToDoctrineParser;
 
     /**
-     * @param array $classesAndMappings
+     * @var JsonDeserializer
      */
-    public function __construct(array $classesAndMappings)
+    private $jsonDeserializer;
+
+    /**
+     * @param array $classesAndMappings
+     * @param JsonDeserializer $jsonDeserializer
+     */
+    public function __construct(array $classesAndMappings, JsonDeserializer $jsonDeserializer)
     {
         foreach($classesAndMappings as $classAndMappings){
             foreach($classAndMappings['mappings'] as $mapping){
@@ -31,14 +38,27 @@ class QBJSDoctrineParserService
         foreach($this->classNameToMapping as $className => $queryBuilderFieldsToEntityProperties){
             $this->classNameToDoctrineParser[$className] = new DoctrineParser($className, $queryBuilderFieldsToEntityProperties);
         }
+        $this->jsonDeserializer = $jsonDeserializer;
     }
+
+    /**
+     * @param string $jsonString
+     * @param string $entityClassName
+     * @return array|\FL\QBJSParser\Parsed\Doctrine\ParsedRuleGroup
+     */
+    public function parseJsonString(string $jsonString, string $entityClassName)
+    {
+        $doctrineParser = $this->newParser($entityClassName);
+        return $doctrineParser->parse($this->jsonDeserializer->deserialize($jsonString));
+    }
+
 
     /**
      * @param string $className
      * @return DoctrineParser
      * @throws \DomainException
      */
-    function newQBJSDoctrineParser(string $className){
+    private function newParser(string $className){
         if(!array_key_exists($className, $this->classNameToDoctrineParser)){
             throw new \DomainException(sprintf(
                 'You have requested a Doctrine Parser for %s, but you have not defined a mapping for it in your configuration',
