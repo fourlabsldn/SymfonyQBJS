@@ -70,18 +70,11 @@ swiftmailer:
 qbjs_parser:
     classes_and_mappings:
         product:
-            class: App\Entity\Product
+            class: AppBundle\Entity\Product
             mappings:
-                mappingID:
+                id:
                     query_builder_id: id
                     entity_property: id
-                mappingIDX:
-                    query_builder_id: id
-                    entity_property: id
-
-        something2:
-            class: someotherclass
-            mappings:
-                mappingID:
-                    query_builder_id: id
-                    entity_property: id
+                price:
+                    query_builder_id: price
+                    entity_property: price

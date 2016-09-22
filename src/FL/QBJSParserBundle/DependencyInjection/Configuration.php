@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
                 ->arrayNode('classes_and_mappings')
                     ->prototype('array')
                         ->children()
-                            ->scalarNode('class')->end()
+                            ->scalarNode('class')->isRequired()->cannotBeEmpty()->end()
                             ->arrayNode('mappings')
                                 ->prototype('array')
                                     ->children()
