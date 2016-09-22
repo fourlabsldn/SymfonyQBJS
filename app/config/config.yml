@@ -66,3 +66,22 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+qbjs_parser:
+    classes_and_mappings:
+        product:
+            class: App\Entity\Product
+            mappings:
+                mappingID:
+                    query_builder_id: id
+                    entity_property: id
+                mappingIDX:
+                    query_builder_id: id
+                    entity_property: id
+
+        something2:
+            class: someotherclass
+            mappings:
+                mappingID:
+                    query_builder_id: id
+                    entity_property: id

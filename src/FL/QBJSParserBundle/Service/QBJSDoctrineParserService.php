@@ -7,6 +7,15 @@ use FL\QBJSParser\Parser\Doctrine\DoctrineParser;
 
 class QBJSDoctrineParserService
 {
+    private $classesAndMappings;
+
+    /**
+     * @param array $classesAndMappings
+     */
+    public function __construct(array $classesAndMappings)
+    {
+    }
+
     function newQBJSDoctrineParser(string $className){
         switch($className){
             case Product::class:
