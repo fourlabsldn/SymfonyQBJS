@@ -68,13 +68,13 @@ swiftmailer:
     spool:     { type: memory }
 
 qbjs_parser:
-    classes_and_mappings:
-        product:
+    doctrine_classes_and_mappings:
+        app_entity_product:
             class: AppBundle\Entity\Product
             mappings:
-                id:
+                product_id:
                     query_builder_id: id
                     entity_property: id
-                price:
+                product_price:
                     query_builder_id: price
                     entity_property: price

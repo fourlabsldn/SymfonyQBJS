@@ -15,11 +15,11 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->arrayNode('classes_and_mappings')
+                ->arrayNode('doctrine_classes_and_mappings')
                     ->prototype('array')
                         ->children()
                             ->scalarNode('class')->isRequired()->cannotBeEmpty()->end()
-                            ->arrayNode('mappings')
+                            ->arrayNode('mappings')->isRequired()->cannotBeEmpty()
                                 ->prototype('array')
                                     ->children()
                                         ->scalarNode('query_builder_id')->isRequired()->cannotBeEmpty()->end()
