@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -30,6 +31,18 @@ class Product
      * @var string|null
      */
     private $price;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Label", cascade={"persist"})
+     * @ORM\JoinTable()
+     */
+    private $labels;
+
+    public function __construct()
+    {
+        $this->labels = new ArrayCollection();
+    }
 
     /**
      * @return int
@@ -76,4 +89,36 @@ class Product
 
         return $this;
     }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getLabels(): ArrayCollection
+    {
+        return $this->labels;
+    }
+
+    /**
+     * @param Label $label
+     * @return Product
+     */
+    public function addLabel(Label $label) : Product
+    {
+        $this->labels->add($label);
+
+        return $this;
+    }
+
+    /**
+     * @param Label $label
+     * @return Product
+     */
+    public function removeLabel(Label $label) : Product
+    {
+        $this->labels->remove($label);
+
+        return $this;
+    }
+
+
 }
