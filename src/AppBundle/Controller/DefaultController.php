@@ -31,8 +31,8 @@ class DefaultController extends Controller
       "field": "specification.description",
       "type": "string",
       "input": "text",
-      "operator": "is_not_null",
-      "value": null
+      "operator": "equal",
+      "value": "Product specification is a specification"
     },
     {
       "condition": "OR",
