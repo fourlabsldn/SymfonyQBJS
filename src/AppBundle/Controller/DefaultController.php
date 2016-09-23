@@ -62,20 +62,10 @@ EOF;
 
         $query = $this->get('doctrine.orm.entity_manager')->createQuery($parsedRuleGroup->getDqlString());
         $query->setParameters($parsedRuleGroup->getParameters());
-        $results = $query->execute();
+//        $results = $query->execute();
 
-//        dump($parsedRuleGroup);
+        dump($parsedRuleGroup);
 //        dump($results);
-
-        $dqlString1 = 'SELECT object FROM AppBundle\Entity\Product object JOIN AppBundle\Entity\Label label WHERE ( label.id IS NOT NULL )';
-        $dqlString2 = 'SELECT object, label, specification FROM AppBundle\Entity\Product object JOIN object.labels label  JOIN label.specification specification WHERE ( object.specification IS NOT NULL )';
-        $results = $this->get('doctrine.orm.entity_manager')->createQuery($dqlString2)->execute();
-        foreach($results as $result){
-            /** @var Product $result */
-            $result->getLabels();
-            $result->getSpecification();
-            dump($result);
-        }
 
 
         // replace this example code with whatever you need
