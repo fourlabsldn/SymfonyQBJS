@@ -27,9 +27,9 @@ class DefaultController extends Controller
       "value": null
     },
     {
-      "id": "price",
-      "field": "price",
-      "type": "double",
+      "id": "specification.description",
+      "field": "specification.description",
+      "type": "string",
       "input": "text",
       "operator": "is_not_null",
       "value": null
@@ -59,13 +59,13 @@ class DefaultController extends Controller
 }
 EOF;
         $parsedRuleGroup = $this->get('qbjs_parser.doctrine_parser')->parseJsonString($jsonString, Product::class);
+        dump($parsedRuleGroup);
 
         $query = $this->get('doctrine.orm.entity_manager')->createQuery($parsedRuleGroup->getDqlString());
         $query->setParameters($parsedRuleGroup->getParameters());
-//        $results = $query->execute();
+        $results = $query->execute();
 
-        dump($parsedRuleGroup);
-//        dump($results);
+        dump($results);
 
 
         // replace this example code with whatever you need

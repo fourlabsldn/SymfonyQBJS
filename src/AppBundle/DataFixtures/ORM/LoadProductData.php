@@ -15,7 +15,7 @@ class LoadProductData implements FixtureInterface
         $label = new Label();
         $label->setName('SALE');
         $labelSpecification = new Specification();
-        $labelSpecification->setDescription('Label specification is a specification');
+        $labelSpecification->setDescription('Label specification description');
         $label->setSpecification($labelSpecification);
 
         $productSpecification = new Specification();
