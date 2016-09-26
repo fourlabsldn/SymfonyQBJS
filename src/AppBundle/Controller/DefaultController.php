@@ -3,14 +3,17 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Product;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
     /**
      * @Route("/", name="homepage")
+     * @Method(methods={"GET", "POST"})
      */
     public function indexAction(Request $request)
     {
@@ -66,6 +69,23 @@ class DefaultController extends Controller
   ]
 }
 EOF;
+        $jsonString = <<<EOF
+{
+  "condition": "AND",
+  "rules": [
+    {
+      "id": "specification.description",
+      "field": "specification.description",
+      "type": "string",
+      "input": "text",
+      "operator": "not_equal",
+      "value": "hello"
+    }
+  ]
+}
+EOF;
+
+
         $parsedRuleGroup = $this->get('qbjs_parser.doctrine_parser')->parseJsonString($jsonString, Product::class);
         dump($parsedRuleGroup);
 
