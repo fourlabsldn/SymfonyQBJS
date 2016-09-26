@@ -75,8 +75,11 @@ qbjs_parser:
                 id: ~
                 price: ~
                 specification.description: ~
+                labels.specification.description: ~
             association_classes:
                  specification: AppBundle\Entity\Specification
+                 labels: AppBundle\Entity\Label
+                 labels.specification: AppBundle\Entity\Specification
 
 
 

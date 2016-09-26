@@ -35,6 +35,14 @@ class DefaultController extends Controller
       "value": "Product specification is a specification"
     },
     {
+      "id": "labels.specification.description",
+      "field": "labels.specification.description",
+      "type": "string",
+      "input": "text",
+      "operator": "equal",
+      "value": "Label specification is a specification"
+    },
+    {
       "condition": "OR",
       "rules": [
         {
