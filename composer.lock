@@ -781,12 +781,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fourlabsldn/QBJSParser.git",
-                "reference": "fa539408da9d73c860dcfb8343e97c637b843622"
+                "reference": "8e7dba53eaa5ec4e048a0bff57637d6ff4a66723"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fourlabsldn/QBJSParser/zipball/fa539408da9d73c860dcfb8343e97c637b843622",
-                "reference": "fa539408da9d73c860dcfb8343e97c637b843622",
+                "url": "https://api.github.com/repos/fourlabsldn/QBJSParser/zipball/8e7dba53eaa5ec4e048a0bff57637d6ff4a66723",
+                "reference": "8e7dba53eaa5ec4e048a0bff57637d6ff4a66723",
                 "shasum": ""
             },
             "require": {
@@ -829,7 +829,7 @@
                 "querybuilder.js.org",
                 "symfony"
             ],
-            "time": "2016-09-23 16:28:02"
+            "time": "2016-09-26 09:09:08"
         },
         {
             "name": "fourlabs/qbjs-parser-bundle",
