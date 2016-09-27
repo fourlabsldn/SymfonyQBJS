@@ -95,6 +95,8 @@ EOF;
 
         dump($results);
 
+        dump($this->get('qbjs_parser.parser_query'));
+
 
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [

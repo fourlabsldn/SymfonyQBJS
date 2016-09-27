@@ -837,12 +837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fourlabsldn/QBJSParserBundle.git",
-                "reference": "6e989441fa6f6ef0226a5dafb23c66a1f67dca3b"
+                "reference": "f43c27db153057bf77d84e30e19af469811c02ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fourlabsldn/QBJSParserBundle/zipball/6e989441fa6f6ef0226a5dafb23c66a1f67dca3b",
-                "reference": "6e989441fa6f6ef0226a5dafb23c66a1f67dca3b",
+                "url": "https://api.github.com/repos/fourlabsldn/QBJSParserBundle/zipball/f43c27db153057bf77d84e30e19af469811c02ac",
+                "reference": "f43c27db153057bf77d84e30e19af469811c02ac",
                 "shasum": ""
             },
             "require": {
@@ -850,9 +850,7 @@
                 "php": "^7.0",
                 "symfony/config": "~2.8|~3.0|~3.1",
                 "symfony/dependency-injection": "~2.8|~3.0|~3.1",
-                "symfony/form": "~2.8|~3.0|~3.1",
-                "symfony/http-kernel": "~2.8|~3.0|~3.1",
-                "symfony/options-resolver": "~2.8|~3.0|~3.1"
+                "symfony/http-kernel": "~2.8|~3.0|~3.1"
             },
             "type": "library",
             "autoload": {
@@ -888,7 +886,7 @@
                 "querybuilder.js.org",
                 "symfony"
             ],
-            "time": "2016-09-27 15:03:19"
+            "time": "2016-09-27 17:08:40"
         },
         {
             "name": "incenteev/composer-parameter-handler",
