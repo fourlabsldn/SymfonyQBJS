@@ -781,12 +781,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fourlabsldn/QBJSParser.git",
-                "reference": "8e7dba53eaa5ec4e048a0bff57637d6ff4a66723"
+                "reference": "5ad76957b05fa0c9002f86a688fdcc0f8851dc97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fourlabsldn/QBJSParser/zipball/8e7dba53eaa5ec4e048a0bff57637d6ff4a66723",
-                "reference": "8e7dba53eaa5ec4e048a0bff57637d6ff4a66723",
+                "url": "https://api.github.com/repos/fourlabsldn/QBJSParser/zipball/5ad76957b05fa0c9002f86a688fdcc0f8851dc97",
+                "reference": "5ad76957b05fa0c9002f86a688fdcc0f8851dc97",
                 "shasum": ""
             },
             "require": {
@@ -829,7 +829,7 @@
                 "querybuilder.js.org",
                 "symfony"
             ],
-            "time": "2016-09-26 09:09:08"
+            "time": "2016-09-28 14:03:50"
         },
         {
             "name": "fourlabs/qbjs-parser-bundle",
@@ -837,12 +837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fourlabsldn/QBJSParserBundle.git",
-                "reference": "0e59667b06c9fe33a2fd199bd08e6e9657d28798"
+                "reference": "0dc6040dd3e06615187f931cb062d39d5e02bad2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fourlabsldn/QBJSParserBundle/zipball/0e59667b06c9fe33a2fd199bd08e6e9657d28798",
-                "reference": "0e59667b06c9fe33a2fd199bd08e6e9657d28798",
+                "url": "https://api.github.com/repos/fourlabsldn/QBJSParserBundle/zipball/0dc6040dd3e06615187f931cb062d39d5e02bad2",
+                "reference": "0dc6040dd3e06615187f931cb062d39d5e02bad2",
                 "shasum": ""
             },
             "require": {
@@ -886,7 +886,7 @@
                 "querybuilder.js.org",
                 "symfony"
             ],
-            "time": "2016-09-28 08:54:52"
+            "time": "2016-09-28 14:41:05"
         },
         {
             "name": "incenteev/composer-parameter-handler",

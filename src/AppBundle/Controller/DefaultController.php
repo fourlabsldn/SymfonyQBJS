@@ -95,14 +95,14 @@ EOF;
 //
 //        dump($results);
 
-        $parserQueries = $this->get('qbjs_parser.parser_query')->getParserQueries();
+        $builders = $this->get('qbjs_parser.builders')->getBuilders();
 
 
 
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
-            'parser_queries' => $parserQueries,
+            'builders' => $builders,
         ]);
     }
 }

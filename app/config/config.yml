@@ -68,7 +68,7 @@ swiftmailer:
     spool:     { type: memory }
 
 qbjs_parser:
-    query_generators:
+    builders:
         product_report_builder:
             class: AppBundle\Entity\Product
             human_readable_name: 'Product Report Builder'

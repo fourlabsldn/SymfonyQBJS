@@ -27,8 +27,8 @@
         <br><br>
         <select id="selectReportBuilder" class="js-chosen-select" title="Select A Report">
             <option> - Select A Report Builder - </option>
-            {% for key, parser_query in parser_queries %}
-                <option value='{{ key }}' data-query-builder-class='{{ parser_query.className }}' data-query-builder-json='{{ parser_query.jsonString }}'>{{ parser_query.humanReadableName }}</option>
+            {% for key, builder in builders %}
+                <option value='{{ key }}' data-query-builder-class='{{ builder.className }}' data-query-builder-json='{{ builder.jsonString }}'>{{ builder.humanReadableName }}</option>
             {% endfor %}
         </select>
     </main>
