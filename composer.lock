@@ -837,12 +837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fourlabsldn/QBJSParserBundle.git",
-                "reference": "0dc6040dd3e06615187f931cb062d39d5e02bad2"
+                "reference": "11b0df5dadb08e115875b0659a63bcaae5a5a926"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fourlabsldn/QBJSParserBundle/zipball/0dc6040dd3e06615187f931cb062d39d5e02bad2",
-                "reference": "0dc6040dd3e06615187f931cb062d39d5e02bad2",
+                "url": "https://api.github.com/repos/fourlabsldn/QBJSParserBundle/zipball/11b0df5dadb08e115875b0659a63bcaae5a5a926",
+                "reference": "11b0df5dadb08e115875b0659a63bcaae5a5a926",
                 "shasum": ""
             },
             "require": {
@@ -886,7 +886,7 @@
                 "querybuilder.js.org",
                 "symfony"
             ],
-            "time": "2016-09-28 14:41:05"
+            "time": "2016-09-28 15:24:30"
         },
         {
             "name": "incenteev/composer-parameter-handler",
