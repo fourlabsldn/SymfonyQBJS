@@ -86,21 +86,23 @@ EOF;
 EOF;
 
 
-        $parsedRuleGroup = $this->get('qbjs_parser.doctrine_parser')->parseJsonString($jsonString, Product::class);
-        dump($parsedRuleGroup);
+//        $parsedRuleGroup = $this->get('qbjs_parser.doctrine_parser')->parseJsonString($jsonString, Product::class);
+//        dump($parsedRuleGroup);
+//
+//        $query = $this->get('doctrine.orm.entity_manager')->createQuery($parsedRuleGroup->getDqlString());
+//        $query->setParameters($parsedRuleGroup->getParameters());
+//        $results = $query->execute();
+//
+//        dump($results);
 
-        $query = $this->get('doctrine.orm.entity_manager')->createQuery($parsedRuleGroup->getDqlString());
-        $query->setParameters($parsedRuleGroup->getParameters());
-        $results = $query->execute();
+        $parserQueries = $this->get('qbjs_parser.parser_query')->getParserQueries();
 
-        dump($results);
-
-        dump($this->get('qbjs_parser.parser_query'));
 
 
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
+            'parser_queries' => $parserQueries,
         ]);
     }
 }

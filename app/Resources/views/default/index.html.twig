@@ -23,6 +23,14 @@
 
         </div>
         <pre id="rules_results" style="margin:15px 0 0 0"></pre>
+
+        <br><br>
+        <select id="selectReportBuilder" class="js-chosen-select" title="Select A Report">
+            <option> - Select A Report Builder - </option>
+            {% for key, parser_query in parser_queries %}
+                <option value='{{ key }}' data-query-builder-class='{{ parser_query.className }}' data-query-builder-json='{{ parser_query.jsonString }}'>{{ parser_query.humanReadableName }}</option>
+            {% endfor %}
+        </select>
     </main>
 {% endblock %}
 
